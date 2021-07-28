@@ -13,7 +13,7 @@
 @foreach($author_wise_post as $row)
 <div class="category_section mobile">
     <div class="article_title header_purple">
-        <h2><a href="category.html" target="_self">{{$row->name}}</a></h2>
+        <h2><a href="{{route('author.post',$row->id)}}" target="_self">{{$row->name}}</a></h2>
     </div>
     <!----article_title------>
     @foreach($row->posts as $element)
@@ -33,7 +33,7 @@
                     <h2><a href="single.html" target="_self">{{$element->title}}</a></h2>
                 </div>
                 <!----category_article_title------>
-                <div class="category_article_date"><a href="#">{{$row->created_at->format('d/m/Y')}}</a>, by: <a href="#">{{$element->user->name}}</a></div>
+                <div class="category_article_date"><a href="{{route('date.post', $row->created_at->format('d-m-Y'))}}">{{$row->created_at->format('d/m/Y')}}</a>, by: <a href="{{route('author.post',$element->user->id)}}">{{$element->user->name}}</a></div>
                 <!----category_article_date------>
                 <div class="category_article_content">
                     {{$element->short_description}}
@@ -63,7 +63,7 @@
         <div class="media-body">
             <h3 class="media-heading">
                 <a href="{{route('details.post', $row['id'])}}" target="_self">{{$row->title}}</a>
-            </h3> <span class="media-date">{{ $row->created_at->format('d/m/Y')}},  by: <a href="#">{{$row->user->name}}</a></span>
+            </h3> <a href="{{route('date.post', $row->created_at->format('d-m-Y'))}}">{{$row->created_at->format('d/m/Y')}}</a>,  by: <a href="{{route('author.post',$row->user->id)}}">{{$row->user->name}}</a>
 
             
         </div>

@@ -21,7 +21,7 @@
                         </div>
                         <!-- feature_article_title -->
 
-                        <div class="feature_article_date"><a href="#" target="_self">{{$row->user->name}}</a>,<a href="#" target="_self">{{$row->created_at->format('d/m/Y')}}</a></div>
+                        <div class="feature_article_date"><a href="{{route('author.post',$row->user->id)}}" target="_self">{{$row->user->name}}</a>,<a href="{{route('date.post', $row->created_at->format('d-m-Y'))}}" target="_self">{{$row->created_at->format('d/m/Y')}}</a></div>
                         <!-- feature_article_date -->
 
                         <div class="feature_article_content">
@@ -56,7 +56,7 @@
                         </div>
                         <!-- feature_article_title -->
 
-                        <div class="feature_article_date"><a href="#" target="_self">{{$row->user->name}}</a>,<a href="#" target="_self">{{$row->created_at->format('d/m/Y')}}</a></div>
+                        <div class="feature_article_date"><a href="{{route('author.post',$row->user->id)}}" target="_self">{{$row->user->name}}</a>,<a href="{{route('date.post', $row->created_at->format('d-m-Y'))}}" target="_self">{{$row->created_at->format('d/m/Y')}}</a></div>
                         <!-- feature_article_date -->
 
                         <div class="feature_article_content">
@@ -111,10 +111,10 @@
                 <span class="tag purple">{{$element->category->name}}</span>
 
                 <div class="category_article_title">
-                    <h2><a href="single.html" target="_self">{{$element->title}}</a></h2>
+                    <h2><a href="{{route('details.post',$element->id,)}}" target="_self">{{$element->title}}</a></h2>
                 </div>
                 <!----category_article_title------>
-                <div class="category_article_date"><a href="#">{{$row->created_at->format('d/m/Y')}}</a>, by: <a href="#">{{$element->user->name}}</a></div>
+                <div class="category_article_date"><a href="{{route('date.post', $element->created_at->format('d-m-Y'))}}">{{$element->created_at->format('d/m/Y')}}</a>, by: <a href="{{route('author.post',$element->user->id)}}">{{$element->user->name}}</a></div>
                 <!----category_article_date------>
                 <div class="category_article_content">
                     {{$element->short_description}}
@@ -144,7 +144,7 @@
         <div class="media-body">
             <h3 class="media-heading">
                 <a href="{{route('details.post', $row['id'])}}" target="_self">{{$row->title}}</a>
-            </h3> <span class="media-date">{{ $row->created_at->format('d/m/Y')}},  by: <a href="#">{{$row->user->name}}</a></span>
+            </h3> <a href="{{route('date.post', $row->created_at->format('d-m-Y'))}}">{{$row->created_at->format('d/m/Y')}}</a>,  by: <a href="{{route('author.post',$row->user->id)}}">{{$row->user->name}}</a>
 
             
         </div>

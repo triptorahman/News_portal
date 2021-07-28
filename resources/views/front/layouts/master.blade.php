@@ -47,53 +47,17 @@
     <div>
         <div>
             <ul id="menu">
-                <li class="active"><a href="blog.html">News</a></li>
-                <li><a href="category.html">Mobile</a></li>
-                <li><a href="blog.html">Tablet</a></li>
-                <li><a href="category.html">Gadgets</a></li>
-                <li><a href="blog.html">Camera</a></li>
-                <li><a href="category.html">Design</a></li>
-                <li class="dropdown m-menu-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">More
-                    <span><i class="fa fa-angle-down"></i></span></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <div class="m-menu-content">
-                                <ul class="col-sm-3">
-                                    <li class="dropdown-header">Widget Haeder</li>
-                                    <li><a href="#">Awesome Features</a></li>
-                                    <li><a href="#">Clean Interface</a></li>
-                                    <li><a href="#">Available Possibilities</a></li>
-                                    <li><a href="#">Responsive Design</a></li>
-                                    <li><a href="#">Pixel Perfect Graphics</a></li>
-                                </ul>
-                                <ul class="col-sm-3">
-                                    <li class="dropdown-header">Widget Haeder</li>
-                                    <li><a href="#">Awesome Features</a></li>
-                                    <li><a href="#">Clean Interface</a></li>
-                                    <li><a href="#">Available Possibilities</a></li>
-                                    <li><a href="#">Responsive Design</a></li>
-                                    <li><a href="#">Pixel Perfect Graphics</a></li>
-                                </ul>
-                                <ul class="col-sm-3">
-                                    <li class="dropdown-header">Widget Haeder</li>
-                                    <li><a href="#">Awesome Features</a></li>
-                                    <li><a href="#">Clean Interface</a></li>
-                                    <li><a href="#">Available Possibilities</a></li>
-                                    <li><a href="#">Responsive Design</a></li>
-                                    <li><a href="#">Pixel Perfect Graphics</a></li>
-                                </ul>
-                                <ul class="col-sm-3">
-                                    <li class="dropdown-header">Widget Haeder</li>
-                                    <li><a href="#">Awesome Features</a></li>
-                                    <li><a href="#">Clean Interface</a></li>
-                                    <li><a href="#">Available Possibilities</a></li>
-                                    <li><a href="#">Responsive Design</a></li>
-                                    <li><a href="#">Pixel Perfect Graphics</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
+                <li class="active"><a href="{{route('home.index')}}">Home</a></li> 
+            @foreach ($categories as $element)
+               <li><a href="{{route('category.post', $element->id)}}">{{ $element->name }}</a></li> 
+            @endforeach
+                 
+                <li style="font-weight: bold !important; font-size: 18px !important;">Authors <i class="fa fa-angle-down"></i></li> 
+
+            @foreach ($authors as $element)
+                <li><a href="{{route('author.post',$element->id)}}">{{$element->name}}</a></li>
+            @endforeach
+                
             </ul>
         </div>
     </div>

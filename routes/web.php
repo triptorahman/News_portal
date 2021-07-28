@@ -77,6 +77,7 @@ Route::group(['prefix'=>'post'],function(){
    Route::get('/details/{post_id}','FrontController@show')->name('details.post');
    Route::get('/category/{category_id}','FrontController@showcategory')->name('category.post');
    Route::get('/author_wise/{author_id}','FrontController@authorwise')->name('author.post');
+   Route::get('/date_wise/{date}','FrontController@datewise')->name('date.post');
 
    
 

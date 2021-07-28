@@ -76,6 +76,19 @@ class FrontController extends Controller
         return view('front.author_wise_post')->with('author_wise_post',$author_wise_post);
     }
 
+    public function datewise($date)
+    {
+        /*dd($date);*/
+       /* $date_wise_data = User::with(['posts' => function($query) {
+            $query->where('status', 1);
+        }])->where("type", 2)->whereDay("created_at", $date)->get();*/
+
+        $date_wise_data=Post::where("status", 1)->whereDay("created_at", $date)->get();
+
+        /*dd($date_wise_data);*/
+        return view('front.date_wise_post')->with('date_wise_data',$date_wise_data);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

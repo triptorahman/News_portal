@@ -17,7 +17,7 @@
                     <div class="feature_article_inner">
                         <div class="tag_lg red"><a href="category.html">{{$post->category->name}}</a></div>
                         <div class="feature_article_title">
-                            <h1><a href="single.html" target="_self">{{$post->title}}</a></h1>
+                            <h1><a href="{{route('details.post',$post->id,)}}" target="_self">{{$post->title}}</a></h1>
                         </div>
                         <!-- feature_article_title -->
 

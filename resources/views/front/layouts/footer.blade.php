@@ -9,22 +9,21 @@
                 <div class="footer">
                     <div class="col-sm-3">
                         <div class="social">
-                            <a class="icons-sm fb-ic"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.facebook.com/triptorahman47" class="icons-sm fb-ic"><i class="fa fa-facebook"></i></a>
                             <!--Twitter-->
-                            <a class="icons-sm tw-ic"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/md-samiur-rahman-08251a139" class="icons-sm tw-ic"><i class="fa fa-linkedin"></i></a>
                             <!--Google +-->
-                            <a class="icons-sm inst-ic"><i class="fa fa-instagram"> </i></a>
+                            <a href="https://github.com/triptorahman/" class="icons-sm inst-ic"><i class="fa fa-github"> </i></a>
+                            <a href="https://join.skype.com/invite/bSWr86vdNjkP" class="icons-sm inst-ic"><i class="fa fa-skype"> </i></a>
                             <!--Linkedin-->
-                            <a class="icons-sm tmb-ic"><i class="fa fa-tumblr"> </i></a>
-                            <!--Pinterest-->
-                            <a class="icons-sm rss-ic"><i class="fa fa-rss"> </i></a>
+                            
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <p>&copy;Developed by <a href="">Md Samiur Rahman</a> </p>
                     </div>
                     <div class="col-sm-3">
-                        <p>Online News Portal</p>
+                        <p>News Portal</p>
                     </div>
                 </div>
             </div>

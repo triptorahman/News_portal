@@ -13,11 +13,12 @@
                                             </span>
                         <!-- Time -->
                         <div class="social">
-                            <a class="icons-sm fb-ic" href=""><i class="fa fa-facebook"></i></a>
+                            <a class="icons-sm fb-ic" href="https://www.facebook.com/triptorahman47"><i class="fa fa-facebook"></i></a>
                             <!--Facebook-->
-                            <a class="icons-sm tw-ic" href=""><i class="fa fa-linkedin"></i></a>
+                            <a class="icons-sm tw-ic" href="https://www.linkedin.com/in/md-samiur-rahman-08251a139"><i class="fa fa-linkedin"></i></a>
                             <!--LinkedIn +-->
-                            <a class="icons-sm inst-ic" href=""><i class="fa fa-github"></i></a>
+                            <a class="icons-sm inst-ic" href="https://github.com/triptorahman/"><i class="fa fa-github"></i></a>
+                            <a class="icons-sm inst-ic" href="https://join.skype.com/invite/bSWr86vdNjkP"><i class="fa fa-skype"></i></a>
                             <!--Github-->
                             
                         </div>
